@@ -1,3 +1,4 @@
+const Case  = require("case")
 const users = []
 
 const addUser=({id,username,room})=>{
@@ -9,8 +10,8 @@ const addUser=({id,username,room})=>{
 
     }
     // Clean the data
-
-    username = username.trim().toLowerCase()
+    
+    username = Case.capital(username).trim()
     room = room.trim().toLowerCase()
 
   
