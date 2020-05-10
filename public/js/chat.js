@@ -76,6 +76,9 @@ socket.on("roomData",({room,users})=>{
 
 $send.addEventListener("click", (e) => {
     e.preventDefault()
+    if($FormInputmessage.value===""){
+        return alert("Message Cannot Be Left Blank")
+    }
     $send.setAttribute("disabled","disabled")
     
     socket.emit("sendMessage", $FormInputmessage.value,(error)=>{
