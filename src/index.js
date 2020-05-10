@@ -19,7 +19,7 @@ server.listen(port, () => {
 });
 
 io.on("connect", (socket) => {
-    console.log("new connection detected")
+  
   
 
      socket.on("join",({ username,room },callback)=>{
